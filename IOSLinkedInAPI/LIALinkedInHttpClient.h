@@ -20,21 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-/**
- *  Check if before AFNetworking 3.0
- */
-#if __has_include_next("AFNetworking/AFHTTPRequestOperationManager.h")
-
+// temp fix for AFNetworking header issue
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 #define AFHTTPManager AFHTTPRequestOperationManager
-
-#elif __has_include_next("AFNetworking/AFHTTPSessionManager.h")
-
-#import <AFNetworking/AFHTTPSessionManager.h>
-#define AFHTTPManager AFHTTPSessionManager
-#define isSessionManager 1
-
-#endif
 
 @class LIALinkedInApplication;
 
